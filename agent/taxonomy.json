@@ -1,0 +1,1652 @@
+[
+ {
+  "id": "technology-software",
+  "label": "Technology & Software",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "technology-software-01",
+    "label": "SaaS",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-02",
+    "label": "AI tools",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-03",
+    "label": "Cybersecurity",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-04",
+    "label": "Web hosting",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-05",
+    "label": "Website builders",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-06",
+    "label": "Cloud computing",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-07",
+    "label": "Developer tools",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-08",
+    "label": "Productivity software",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-09",
+    "label": "CRM",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-10",
+    "label": "Project management",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-11",
+    "label": "Email marketing software",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-12",
+    "label": "Analytics software",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-13",
+    "label": "E-commerce software",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-14",
+    "label": "Graphic design software",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-15",
+    "label": "Electronics",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-16",
+    "label": "Computers",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-17",
+    "label": "Smartphones",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-18",
+    "label": "Smart home technology",
+    "isCustom": false
+   },
+   {
+    "id": "technology-software-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "fashion-apparel",
+  "label": "Fashion & Apparel",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "fashion-apparel-01",
+    "label": "Women's clothing",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-02",
+    "label": "Men's clothing",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-03",
+    "label": "Children's clothing",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-04",
+    "label": "Shoes",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-05",
+    "label": "Sportswear",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-06",
+    "label": "Accessories",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-07",
+    "label": "Handbags",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-08",
+    "label": "Jewelry",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-09",
+    "label": "Watches",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-10",
+    "label": "Luxury fashion",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-11",
+    "label": "Sustainable fashion",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-12",
+    "label": "Plus-size fashion",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-13",
+    "label": "Outdoor clothing",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-14",
+    "label": "Lingerie",
+    "isCustom": false
+   },
+   {
+    "id": "fashion-apparel-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "beauty-personal-care",
+  "label": "Beauty & Personal Care",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "beauty-personal-care-01",
+    "label": "Skincare",
+    "isCustom": false
+   },
+   {
+    "id": "beauty-personal-care-02",
+    "label": "Makeup",
+    "isCustom": false
+   },
+   {
+    "id": "beauty-personal-care-03",
+    "label": "Haircare",
+    "isCustom": false
+   },
+   {
+    "id": "beauty-personal-care-04",
+    "label": "Fragrances",
+    "isCustom": false
+   },
+   {
+    "id": "beauty-personal-care-05",
+    "label": "Grooming",
+    "isCustom": false
+   },
+   {
+    "id": "beauty-personal-care-06",
+    "label": "Nail care",
+    "isCustom": false
+   },
+   {
+    "id": "beauty-personal-care-07",
+    "label": "Beauty tools",
+    "isCustom": false
+   },
+   {
+    "id": "beauty-personal-care-08",
+    "label": "Organic beauty",
+    "isCustom": false
+   },
+   {
+    "id": "beauty-personal-care-09",
+    "label": "Personal hygiene",
+    "isCustom": false
+   },
+   {
+    "id": "beauty-personal-care-10",
+    "label": "Beauty subscriptions",
+    "isCustom": false
+   },
+   {
+    "id": "beauty-personal-care-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "health-wellness",
+  "label": "Health & Wellness",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "health-wellness-01",
+    "label": "Fitness",
+    "isCustom": false
+   },
+   {
+    "id": "health-wellness-02",
+    "label": "Nutrition",
+    "isCustom": false
+   },
+   {
+    "id": "health-wellness-03",
+    "label": "Vitamins and supplements",
+    "isCustom": false
+   },
+   {
+    "id": "health-wellness-04",
+    "label": "Mental wellness",
+    "isCustom": false
+   },
+   {
+    "id": "health-wellness-05",
+    "label": "Meditation",
+    "isCustom": false
+   },
+   {
+    "id": "health-wellness-06",
+    "label": "Sleep products",
+    "isCustom": false
+   },
+   {
+    "id": "health-wellness-07",
+    "label": "Health technology",
+    "isCustom": false
+   },
+   {
+    "id": "health-wellness-08",
+    "label": "Telehealth",
+    "isCustom": false
+   },
+   {
+    "id": "health-wellness-09",
+    "label": "Wellness retreats",
+    "isCustom": false
+   },
+   {
+    "id": "health-wellness-10",
+    "label": "Personal care devices",
+    "isCustom": false
+   },
+   {
+    "id": "health-wellness-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "sports-outdoors",
+  "label": "Sports & Outdoors",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "sports-outdoors-01",
+    "label": "Hiking",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-02",
+    "label": "Cycling",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-03",
+    "label": "Camping",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-04",
+    "label": "Fishing",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-05",
+    "label": "Running",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-06",
+    "label": "Swimming",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-07",
+    "label": "Team sports",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-08",
+    "label": "Winter sports",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-09",
+    "label": "Water sports",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-10",
+    "label": "Climbing",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-11",
+    "label": "Outdoor equipment",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-12",
+    "label": "Sporting goods",
+    "isCustom": false
+   },
+   {
+    "id": "sports-outdoors-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "travel-hospitality",
+  "label": "Travel & Hospitality",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "travel-hospitality-01",
+    "label": "Hotels",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-02",
+    "label": "Flights",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-03",
+    "label": "Holiday packages",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-04",
+    "label": "Car rentals",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-05",
+    "label": "Cruises",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-06",
+    "label": "Travel insurance",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-07",
+    "label": "Travel accessories",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-08",
+    "label": "Adventure travel",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-09",
+    "label": "Tours and activities",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-10",
+    "label": "Vacation rentals",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-11",
+    "label": "Travel booking platforms",
+    "isCustom": false
+   },
+   {
+    "id": "travel-hospitality-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "food-beverage",
+  "label": "Food & Beverage",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "food-beverage-01",
+    "label": "Coffee",
+    "isCustom": false
+   },
+   {
+    "id": "food-beverage-02",
+    "label": "Tea",
+    "isCustom": false
+   },
+   {
+    "id": "food-beverage-03",
+    "label": "Specialty foods",
+    "isCustom": false
+   },
+   {
+    "id": "food-beverage-04",
+    "label": "Meal kits",
+    "isCustom": false
+   },
+   {
+    "id": "food-beverage-05",
+    "label": "Grocery delivery",
+    "isCustom": false
+   },
+   {
+    "id": "food-beverage-06",
+    "label": "Organic food",
+    "isCustom": false
+   },
+   {
+    "id": "food-beverage-07",
+    "label": "Kitchen equipment",
+    "isCustom": false
+   },
+   {
+    "id": "food-beverage-08",
+    "label": "Cooking products",
+    "isCustom": false
+   },
+   {
+    "id": "food-beverage-09",
+    "label": "Food subscriptions",
+    "isCustom": false
+   },
+   {
+    "id": "food-beverage-10",
+    "label": "Beverages",
+    "isCustom": false
+   },
+   {
+    "id": "food-beverage-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "home-garden",
+  "label": "Home & Garden",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "home-garden-01",
+    "label": "Furniture",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-02",
+    "label": "Home decor",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-03",
+    "label": "Lighting",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-04",
+    "label": "Kitchen appliances",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-05",
+    "label": "Home improvement",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-06",
+    "label": "DIY",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-07",
+    "label": "Gardening",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-08",
+    "label": "Cleaning products",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-09",
+    "label": "Smart home",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-10",
+    "label": "Interior design",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-11",
+    "label": "Bedding and textiles",
+    "isCustom": false
+   },
+   {
+    "id": "home-garden-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "finance-fintech",
+  "label": "Finance & Fintech",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "finance-fintech-01",
+    "label": "Personal banking",
+    "isCustom": false
+   },
+   {
+    "id": "finance-fintech-02",
+    "label": "Credit cards",
+    "isCustom": false
+   },
+   {
+    "id": "finance-fintech-03",
+    "label": "Investing platforms",
+    "isCustom": false
+   },
+   {
+    "id": "finance-fintech-04",
+    "label": "Trading platforms",
+    "isCustom": false
+   },
+   {
+    "id": "finance-fintech-05",
+    "label": "Budgeting tools",
+    "isCustom": false
+   },
+   {
+    "id": "finance-fintech-06",
+    "label": "Accounting software",
+    "isCustom": false
+   },
+   {
+    "id": "finance-fintech-07",
+    "label": "Payment services",
+    "isCustom": false
+   },
+   {
+    "id": "finance-fintech-08",
+    "label": "Financial education",
+    "isCustom": false
+   },
+   {
+    "id": "finance-fintech-09",
+    "label": "Money transfer services",
+    "isCustom": false
+   },
+   {
+    "id": "finance-fintech-10",
+    "label": "Personal finance apps",
+    "isCustom": false
+   },
+   {
+    "id": "finance-fintech-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "education-learning",
+  "label": "Education & Learning",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "education-learning-01",
+    "label": "Online courses",
+    "isCustom": false
+   },
+   {
+    "id": "education-learning-02",
+    "label": "Language learning",
+    "isCustom": false
+   },
+   {
+    "id": "education-learning-03",
+    "label": "Tutoring",
+    "isCustom": false
+   },
+   {
+    "id": "education-learning-04",
+    "label": "Professional certifications",
+    "isCustom": false
+   },
+   {
+    "id": "education-learning-05",
+    "label": "Educational software",
+    "isCustom": false
+   },
+   {
+    "id": "education-learning-06",
+    "label": "E-learning platforms",
+    "isCustom": false
+   },
+   {
+    "id": "education-learning-07",
+    "label": "Study materials",
+    "isCustom": false
+   },
+   {
+    "id": "education-learning-08",
+    "label": "Test preparation",
+    "isCustom": false
+   },
+   {
+    "id": "education-learning-09",
+    "label": "Career development",
+    "isCustom": false
+   },
+   {
+    "id": "education-learning-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "business-professional-services",
+  "label": "Business & Professional Services",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "business-professional-services-01",
+    "label": "Digital marketing",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-02",
+    "label": "SEO",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-03",
+    "label": "Business consulting",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-04",
+    "label": "Accounting services",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-05",
+    "label": "Legal services",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-06",
+    "label": "HR software",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-07",
+    "label": "Recruitment",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-08",
+    "label": "Business coaching",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-09",
+    "label": "Coworking spaces",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-10",
+    "label": "Office supplies",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-11",
+    "label": "Virtual assistants",
+    "isCustom": false
+   },
+   {
+    "id": "business-professional-services-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "automotive-mobility",
+  "label": "Automotive & Mobility",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "automotive-mobility-01",
+    "label": "Cars",
+    "isCustom": false
+   },
+   {
+    "id": "automotive-mobility-02",
+    "label": "Motorcycles",
+    "isCustom": false
+   },
+   {
+    "id": "automotive-mobility-03",
+    "label": "Electric vehicles",
+    "isCustom": false
+   },
+   {
+    "id": "automotive-mobility-04",
+    "label": "Car accessories",
+    "isCustom": false
+   },
+   {
+    "id": "automotive-mobility-05",
+    "label": "Vehicle parts",
+    "isCustom": false
+   },
+   {
+    "id": "automotive-mobility-06",
+    "label": "Car insurance",
+    "isCustom": false
+   },
+   {
+    "id": "automotive-mobility-07",
+    "label": "Vehicle rentals",
+    "isCustom": false
+   },
+   {
+    "id": "automotive-mobility-08",
+    "label": "EV charging",
+    "isCustom": false
+   },
+   {
+    "id": "automotive-mobility-09",
+    "label": "Car maintenance",
+    "isCustom": false
+   },
+   {
+    "id": "automotive-mobility-10",
+    "label": "Automotive technology",
+    "isCustom": false
+   },
+   {
+    "id": "automotive-mobility-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "gaming-esports",
+  "label": "Gaming & Esports",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "gaming-esports-01",
+    "label": "PC gaming",
+    "isCustom": false
+   },
+   {
+    "id": "gaming-esports-02",
+    "label": "Console gaming",
+    "isCustom": false
+   },
+   {
+    "id": "gaming-esports-03",
+    "label": "Mobile games",
+    "isCustom": false
+   },
+   {
+    "id": "gaming-esports-04",
+    "label": "Gaming accessories",
+    "isCustom": false
+   },
+   {
+    "id": "gaming-esports-05",
+    "label": "Gaming computers",
+    "isCustom": false
+   },
+   {
+    "id": "gaming-esports-06",
+    "label": "Esports",
+    "isCustom": false
+   },
+   {
+    "id": "gaming-esports-07",
+    "label": "Game subscriptions",
+    "isCustom": false
+   },
+   {
+    "id": "gaming-esports-08",
+    "label": "Streaming equipment",
+    "isCustom": false
+   },
+   {
+    "id": "gaming-esports-09",
+    "label": "Gaming chairs and desks",
+    "isCustom": false
+   },
+   {
+    "id": "gaming-esports-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "entertainment-media",
+  "label": "Entertainment & Media",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "entertainment-media-01",
+    "label": "Music",
+    "isCustom": false
+   },
+   {
+    "id": "entertainment-media-02",
+    "label": "Movies",
+    "isCustom": false
+   },
+   {
+    "id": "entertainment-media-03",
+    "label": "Streaming services",
+    "isCustom": false
+   },
+   {
+    "id": "entertainment-media-04",
+    "label": "Books",
+    "isCustom": false
+   },
+   {
+    "id": "entertainment-media-05",
+    "label": "Audiobooks",
+    "isCustom": false
+   },
+   {
+    "id": "entertainment-media-06",
+    "label": "Photography",
+    "isCustom": false
+   },
+   {
+    "id": "entertainment-media-07",
+    "label": "Video production",
+    "isCustom": false
+   },
+   {
+    "id": "entertainment-media-08",
+    "label": "Podcasts",
+    "isCustom": false
+   },
+   {
+    "id": "entertainment-media-09",
+    "label": "Digital media subscriptions",
+    "isCustom": false
+   },
+   {
+    "id": "entertainment-media-10",
+    "label": "Creator tools",
+    "isCustom": false
+   },
+   {
+    "id": "entertainment-media-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "real-estate-property",
+  "label": "Real Estate & Property",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "real-estate-property-01",
+    "label": "Property marketplaces",
+    "isCustom": false
+   },
+   {
+    "id": "real-estate-property-02",
+    "label": "Rental platforms",
+    "isCustom": false
+   },
+   {
+    "id": "real-estate-property-03",
+    "label": "Property management",
+    "isCustom": false
+   },
+   {
+    "id": "real-estate-property-04",
+    "label": "Real estate services",
+    "isCustom": false
+   },
+   {
+    "id": "real-estate-property-05",
+    "label": "Home valuation",
+    "isCustom": false
+   },
+   {
+    "id": "real-estate-property-06",
+    "label": "Property investment education",
+    "isCustom": false
+   },
+   {
+    "id": "real-estate-property-07",
+    "label": "Mortgage comparison",
+    "isCustom": false
+   },
+   {
+    "id": "real-estate-property-08",
+    "label": "Moving services",
+    "isCustom": false
+   },
+   {
+    "id": "real-estate-property-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "insurance",
+  "label": "Insurance",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "insurance-01",
+    "label": "Travel insurance",
+    "isCustom": false
+   },
+   {
+    "id": "insurance-02",
+    "label": "Car insurance",
+    "isCustom": false
+   },
+   {
+    "id": "insurance-03",
+    "label": "Home insurance",
+    "isCustom": false
+   },
+   {
+    "id": "insurance-04",
+    "label": "Life insurance",
+    "isCustom": false
+   },
+   {
+    "id": "insurance-05",
+    "label": "Health insurance",
+    "isCustom": false
+   },
+   {
+    "id": "insurance-06",
+    "label": "Pet insurance",
+    "isCustom": false
+   },
+   {
+    "id": "insurance-07",
+    "label": "Business insurance",
+    "isCustom": false
+   },
+   {
+    "id": "insurance-08",
+    "label": "Renters insurance",
+    "isCustom": false
+   },
+   {
+    "id": "insurance-09",
+    "label": "Insurance comparison",
+    "isCustom": false
+   },
+   {
+    "id": "insurance-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "pets-animals",
+  "label": "Pets & Animals",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "pets-animals-01",
+    "label": "Pet food",
+    "isCustom": false
+   },
+   {
+    "id": "pets-animals-02",
+    "label": "Pet accessories",
+    "isCustom": false
+   },
+   {
+    "id": "pets-animals-03",
+    "label": "Pet insurance",
+    "isCustom": false
+   },
+   {
+    "id": "pets-animals-04",
+    "label": "Pet healthcare",
+    "isCustom": false
+   },
+   {
+    "id": "pets-animals-05",
+    "label": "Grooming",
+    "isCustom": false
+   },
+   {
+    "id": "pets-animals-06",
+    "label": "Training",
+    "isCustom": false
+   },
+   {
+    "id": "pets-animals-07",
+    "label": "Toys",
+    "isCustom": false
+   },
+   {
+    "id": "pets-animals-08",
+    "label": "Pet technology",
+    "isCustom": false
+   },
+   {
+    "id": "pets-animals-09",
+    "label": "Aquariums",
+    "isCustom": false
+   },
+   {
+    "id": "pets-animals-10",
+    "label": "Equestrian products",
+    "isCustom": false
+   },
+   {
+    "id": "pets-animals-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "baby-kids-parenting",
+  "label": "Baby, Kids & Parenting",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "baby-kids-parenting-01",
+    "label": "Baby products",
+    "isCustom": false
+   },
+   {
+    "id": "baby-kids-parenting-02",
+    "label": "Strollers",
+    "isCustom": false
+   },
+   {
+    "id": "baby-kids-parenting-03",
+    "label": "Toys",
+    "isCustom": false
+   },
+   {
+    "id": "baby-kids-parenting-04",
+    "label": "Children's clothing",
+    "isCustom": false
+   },
+   {
+    "id": "baby-kids-parenting-05",
+    "label": "Educational toys",
+    "isCustom": false
+   },
+   {
+    "id": "baby-kids-parenting-06",
+    "label": "Parenting resources",
+    "isCustom": false
+   },
+   {
+    "id": "baby-kids-parenting-07",
+    "label": "Childcare services",
+    "isCustom": false
+   },
+   {
+    "id": "baby-kids-parenting-08",
+    "label": "Family products",
+    "isCustom": false
+   },
+   {
+    "id": "baby-kids-parenting-09",
+    "label": "Nursery furniture",
+    "isCustom": false
+   },
+   {
+    "id": "baby-kids-parenting-10",
+    "label": "Baby feeding products",
+    "isCustom": false
+   },
+   {
+    "id": "baby-kids-parenting-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "lifestyle-hobbies",
+  "label": "Lifestyle & Hobbies",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "lifestyle-hobbies-01",
+    "label": "Arts and crafts",
+    "isCustom": false
+   },
+   {
+    "id": "lifestyle-hobbies-02",
+    "label": "DIY hobbies",
+    "isCustom": false
+   },
+   {
+    "id": "lifestyle-hobbies-03",
+    "label": "Collectibles",
+    "isCustom": false
+   },
+   {
+    "id": "lifestyle-hobbies-04",
+    "label": "Photography hobbies",
+    "isCustom": false
+   },
+   {
+    "id": "lifestyle-hobbies-05",
+    "label": "Gardening hobbies",
+    "isCustom": false
+   },
+   {
+    "id": "lifestyle-hobbies-06",
+    "label": "Musical instruments",
+    "isCustom": false
+   },
+   {
+    "id": "lifestyle-hobbies-07",
+    "label": "Personal development",
+    "isCustom": false
+   },
+   {
+    "id": "lifestyle-hobbies-08",
+    "label": "Subscription boxes",
+    "isCustom": false
+   },
+   {
+    "id": "lifestyle-hobbies-09",
+    "label": "Outdoor hobbies",
+    "isCustom": false
+   },
+   {
+    "id": "lifestyle-hobbies-10",
+    "label": "Board games",
+    "isCustom": false
+   },
+   {
+    "id": "lifestyle-hobbies-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "events-experiences",
+  "label": "Events & Experiences",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "events-experiences-01",
+    "label": "Concerts",
+    "isCustom": false
+   },
+   {
+    "id": "events-experiences-02",
+    "label": "Festivals",
+    "isCustom": false
+   },
+   {
+    "id": "events-experiences-03",
+    "label": "Sporting events",
+    "isCustom": false
+   },
+   {
+    "id": "events-experiences-04",
+    "label": "Theatre",
+    "isCustom": false
+   },
+   {
+    "id": "events-experiences-05",
+    "label": "Museums",
+    "isCustom": false
+   },
+   {
+    "id": "events-experiences-06",
+    "label": "Attractions",
+    "isCustom": false
+   },
+   {
+    "id": "events-experiences-07",
+    "label": "Experience gifts",
+    "isCustom": false
+   },
+   {
+    "id": "events-experiences-08",
+    "label": "Event tickets",
+    "isCustom": false
+   },
+   {
+    "id": "events-experiences-09",
+    "label": "Entertainment activities",
+    "isCustom": false
+   },
+   {
+    "id": "events-experiences-10",
+    "label": "Workshops and classes",
+    "isCustom": false
+   },
+   {
+    "id": "events-experiences-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "telecommunications-internet",
+  "label": "Telecommunications & Internet",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "telecommunications-internet-01",
+    "label": "Mobile plans",
+    "isCustom": false
+   },
+   {
+    "id": "telecommunications-internet-02",
+    "label": "Broadband",
+    "isCustom": false
+   },
+   {
+    "id": "telecommunications-internet-03",
+    "label": "Internet providers",
+    "isCustom": false
+   },
+   {
+    "id": "telecommunications-internet-04",
+    "label": "VPN services",
+    "isCustom": false
+   },
+   {
+    "id": "telecommunications-internet-05",
+    "label": "Domain registration",
+    "isCustom": false
+   },
+   {
+    "id": "telecommunications-internet-06",
+    "label": "Web services",
+    "isCustom": false
+   },
+   {
+    "id": "telecommunications-internet-07",
+    "label": "Communication tools",
+    "isCustom": false
+   },
+   {
+    "id": "telecommunications-internet-08",
+    "label": "Mobile accessories",
+    "isCustom": false
+   },
+   {
+    "id": "telecommunications-internet-09",
+    "label": "Satellite internet",
+    "isCustom": false
+   },
+   {
+    "id": "telecommunications-internet-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "sustainability-environment",
+  "label": "Sustainability & Environment",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "sustainability-environment-01",
+    "label": "Solar energy",
+    "isCustom": false
+   },
+   {
+    "id": "sustainability-environment-02",
+    "label": "Renewable energy",
+    "isCustom": false
+   },
+   {
+    "id": "sustainability-environment-03",
+    "label": "Eco-friendly products",
+    "isCustom": false
+   },
+   {
+    "id": "sustainability-environment-04",
+    "label": "Sustainable fashion",
+    "isCustom": false
+   },
+   {
+    "id": "sustainability-environment-05",
+    "label": "Recycling",
+    "isCustom": false
+   },
+   {
+    "id": "sustainability-environment-06",
+    "label": "Energy efficiency",
+    "isCustom": false
+   },
+   {
+    "id": "sustainability-environment-07",
+    "label": "Green technology",
+    "isCustom": false
+   },
+   {
+    "id": "sustainability-environment-08",
+    "label": "Reusable products",
+    "isCustom": false
+   },
+   {
+    "id": "sustainability-environment-09",
+    "label": "Electric home solutions",
+    "isCustom": false
+   },
+   {
+    "id": "sustainability-environment-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "industrial-manufacturing",
+  "label": "Industrial & Manufacturing",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "industrial-manufacturing-01",
+    "label": "Industrial equipment",
+    "isCustom": false
+   },
+   {
+    "id": "industrial-manufacturing-02",
+    "label": "Machinery",
+    "isCustom": false
+   },
+   {
+    "id": "industrial-manufacturing-03",
+    "label": "Manufacturing supplies",
+    "isCustom": false
+   },
+   {
+    "id": "industrial-manufacturing-04",
+    "label": "Safety equipment",
+    "isCustom": false
+   },
+   {
+    "id": "industrial-manufacturing-05",
+    "label": "Tools",
+    "isCustom": false
+   },
+   {
+    "id": "industrial-manufacturing-06",
+    "label": "Automation",
+    "isCustom": false
+   },
+   {
+    "id": "industrial-manufacturing-07",
+    "label": "Engineering products",
+    "isCustom": false
+   },
+   {
+    "id": "industrial-manufacturing-08",
+    "label": "3D printing",
+    "isCustom": false
+   },
+   {
+    "id": "industrial-manufacturing-09",
+    "label": "Commercial components",
+    "isCustom": false
+   },
+   {
+    "id": "industrial-manufacturing-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "transportation-logistics",
+  "label": "Transportation & Logistics",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "transportation-logistics-01",
+    "label": "Courier services",
+    "isCustom": false
+   },
+   {
+    "id": "transportation-logistics-02",
+    "label": "Shipping",
+    "isCustom": false
+   },
+   {
+    "id": "transportation-logistics-03",
+    "label": "Freight",
+    "isCustom": false
+   },
+   {
+    "id": "transportation-logistics-04",
+    "label": "Moving services",
+    "isCustom": false
+   },
+   {
+    "id": "transportation-logistics-05",
+    "label": "Logistics software",
+    "isCustom": false
+   },
+   {
+    "id": "transportation-logistics-06",
+    "label": "Fleet management",
+    "isCustom": false
+   },
+   {
+    "id": "transportation-logistics-07",
+    "label": "Delivery platforms",
+    "isCustom": false
+   },
+   {
+    "id": "transportation-logistics-08",
+    "label": "Warehouse technology",
+    "isCustom": false
+   },
+   {
+    "id": "transportation-logistics-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "shopping-ecommerce",
+  "label": "Shopping & Ecommerce",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "shopping-ecommerce-01",
+    "label": "Online marketplaces",
+    "isCustom": false
+   },
+   {
+    "id": "shopping-ecommerce-02",
+    "label": "Price comparison",
+    "isCustom": false
+   },
+   {
+    "id": "shopping-ecommerce-03",
+    "label": "Coupon platforms",
+    "isCustom": false
+   },
+   {
+    "id": "shopping-ecommerce-04",
+    "label": "Cashback services",
+    "isCustom": false
+   },
+   {
+    "id": "shopping-ecommerce-05",
+    "label": "Deal websites",
+    "isCustom": false
+   },
+   {
+    "id": "shopping-ecommerce-06",
+    "label": "Product comparison",
+    "isCustom": false
+   },
+   {
+    "id": "shopping-ecommerce-07",
+    "label": "Subscription commerce",
+    "isCustom": false
+   },
+   {
+    "id": "shopping-ecommerce-08",
+    "label": "Gift cards",
+    "isCustom": false
+   },
+   {
+    "id": "shopping-ecommerce-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "adult-intimate-products",
+  "label": "Adult & Intimate Products",
+  "isCustom": false,
+  "niches": [
+   {
+    "id": "adult-intimate-products-01",
+    "label": "Adult toys",
+    "isCustom": false
+   },
+   {
+    "id": "adult-intimate-products-02",
+    "label": "Sexual wellness",
+    "isCustom": false
+   },
+   {
+    "id": "adult-intimate-products-03",
+    "label": "Intimate accessories",
+    "isCustom": false
+   },
+   {
+    "id": "adult-intimate-products-04",
+    "label": "Lingerie",
+    "isCustom": false
+   },
+   {
+    "id": "adult-intimate-products-05",
+    "label": "Couples' products",
+    "isCustom": false
+   },
+   {
+    "id": "adult-intimate-products-06",
+    "label": "Sexual health products",
+    "isCustom": false
+   },
+   {
+    "id": "adult-intimate-products-07",
+    "label": "Adult novelty products",
+    "isCustom": false
+   },
+   {
+    "id": "adult-intimate-products-08",
+    "label": "Erotic media and subscriptions",
+    "isCustom": false
+   },
+   {
+    "id": "adult-intimate-products-custom",
+    "label": "Other (enter a custom niche)",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "other-custom",
+  "label": "Other / Custom industry (enter manually)",
+  "isCustom": true,
+  "niches": [
+   {
+    "id": "other-custom-niche",
+    "label": "Enter a custom niche",
+    "isCustom": true
+   }
+  ]
+ },
+ {
+  "id": "igaming-crypto",
+  "label": "iGaming, Casino & Crypto",
+  "niches": [
+    { "id": "igaming-crypto-01", "label": "Online Casinos" },
+    { "id": "igaming-crypto-02", "label": "Sports Betting" },
+    { "id": "igaming-crypto-03", "label": "Gambling & Poker" },
+    { "id": "igaming-crypto-04", "label": "Crypto & Web3" },
+    { "id": "igaming-crypto-05", "label": "Forex & Trading" }
+  ]
+}
+]
