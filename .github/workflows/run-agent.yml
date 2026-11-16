@@ -2,8 +2,8 @@ name: Gretl Weekly Scan
 
 on:
   schedule:
-    # Runs every Monday at 08:00 UTC (09:00 CET / Stockholm time)
-    - cron: '0 8 * * 1'
+    # Runs every Tuesday at 07:23 UTC (08:23 CET / Stockholm time)
+    - cron: '23 7 * * 2'
   workflow_dispatch: # Allows manual runs from the GitHub Actions tab
 
 jobs:

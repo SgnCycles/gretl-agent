@@ -1,18 +1,50 @@
-// Gretl - Production Agent Runner (SOUL.md Compliant)
-// Reads active subscriptions from Supabase, discovers & re-checks affiliate programmes,
-// applies SOUL.md rules (ranking, 15-item cap, Skipped/Returned/Unchanged memory),
-// saves the report to Supabase `reports`, and emails via Gmail SMTP if configured.
+// Gretl - Production Agent Runner
+// Dynamically loads agent/IDENTITY.md, agent/SOUL.md, and agent/USER.md as Gemini's systemInstruction,
+// discovers & re-checks affiliate programmes from Supabase subscriptions,
+// persists memory in `programmes_seen` and `reports`, and emails via Gmail SMTP.
 //
 // Run from the gretl-agent folder:
 //   node agent/run.mjs
 
 import "dotenv/config";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
 import { GoogleGenAI, Type } from "@google/genai";
 import { resolveScan } from "./taxonomy.mjs";
 import nodemailer from "nodemailer";
 
-// 1. Check required keys
+// ---------- 0. Load Agent Markdown Context (agent/IDENTITY.md, agent/SOUL.md, agent/USER.md) ----------
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+function loadAgentContextFiles(filenames) {
+  const sections = [];
+  for (const name of filenames) {
+    const filePath = path.join(__dirname, name);
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, "utf8").trim();
+      if (content) {
+        sections.push(`=== ${name} ===\n${content}`);
+        console.log(`Loaded ${name} (${content.length} chars)`);
+      }
+    } else {
+      console.warn(`Warning: ${name} not found at ${filePath}`);
+    }
+  }
+  if (sections.length === 0) {
+    throw new Error("None of IDENTITY.md, SOUL.md, or USER.md were found in the agent/ folder.");
+  }
+  return sections.join("\n\n");
+}
+
+const AGENT_SYSTEM_INSTRUCTION = loadAgentContextFiles([
+  "IDENTITY.md",
+  "SOUL.md",
+  "USER.md",
+]);
+
+// ---------- 1. Check required keys ----------
 const tavilyKey = process.env.TAVILY_API_KEY;
 const geminiKey = process.env.GEMINI_API_KEY;
 const supabaseUrl = process.env.SUPABASE_URL;
@@ -49,7 +81,6 @@ const MAX_REPORT_ITEMS = 15;
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const todayISO = () => new Date().toISOString().slice(0, 10);
 
-// Monday of the current week (YYYY-MM-DD) for reports.week_start
 function getWeekStartISO() {
   const d = new Date();
   const day = d.getUTCDay();
@@ -58,7 +89,7 @@ function getWeekStartISO() {
   return monday.toISOString().slice(0, 10);
 }
 
-// ---------- Helper: Call Gemini with fallback & retry ----------
+// ---------- Helper: Call Gemini with Markdown System Instruction ----------
 async function generateJson(contents, schema, maxAttempts = 2) {
   for (const model of MODELS) {
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
@@ -68,6 +99,7 @@ async function generateJson(contents, schema, maxAttempts = 2) {
           model,
           contents,
           config: {
+            systemInstruction: AGENT_SYSTEM_INSTRUCTION,
             responseMimeType: "application/json",
             responseSchema: schema,
             thinkingConfig: { thinkingLevel: "low" },
@@ -232,7 +264,7 @@ const extractSchema = {
   ],
 };
 
-// ---------- SOUL.md Rule Helpers ----------
+// ---------- Data Normalization & State Helpers ----------
 function cleanVal(val, fallback = "Not found") {
   if (!val || typeof val !== "string") return fallback;
   const trimmed = val.trim();
@@ -251,13 +283,11 @@ function normalizeContactStatus(raw, signupLink) {
   return "Not found";
 }
 
-// SOUL.md Rule 4: Skip programmes with too much missing information
 function checkRule4Qualifies(rec) {
   const hasName = Boolean(rec.programme_name && rec.programme_name !== "Not found");
   const hasContact =
     rec.contact_status === "Apply online" || rec.contact_status === "Private contact required";
 
-  // Count how many of the 8 details are filled in
   const details = [
     rec.network,
     rec.commission_text,
@@ -276,7 +306,6 @@ function checkRule4Qualifies(rec) {
   };
 }
 
-// SOUL.md Rule 6: Compare the 4 tracked fields for Returned status
 const CONTACT_RANK = {
   "Not found": 0,
   "Private contact required": 1,
@@ -322,7 +351,6 @@ function detectChanges(oldRow, newRec) {
   return changes;
 }
 
-// SOUL.md Rule 5: Rank highest commission % -> highest fixed USD -> unspecified -> longest cookie
 function rankProgrammes(list) {
   return [...list].sort((a, b) => {
     const aPct = typeof a.commission_percent === "number" ? a.commission_percent : -1;
@@ -339,7 +367,7 @@ function rankProgrammes(list) {
   });
 }
 
-// ---------- Build SOUL.md Email HTML ----------
+// ---------- Build Email HTML ----------
 function escapeHtml(str) {
   return String(str || "")
     .replace(/&/g, "&amp;")
@@ -490,7 +518,6 @@ async function processSubscription(sub) {
 
   for (const row of existingRows || []) {
     if (row.status === "Skipped") {
-      // Rule 6: Save Skipped rows so we can re-check them on future scans
       const recheckUrl =
         (Array.isArray(row.source_links) && row.source_links[0]) || row.signup_link || row.website;
       if (recheckUrl && recheckUrl.startsWith("http")) {
@@ -539,7 +566,7 @@ async function processSubscription(sub) {
   );
   console.log(`  Found ${foundPages.size} unique pages (${freshResults.length} new URLs).`);
 
-  // 3. Gemini Triage on fresh URLs
+  // 3. Gemini Triage on fresh URLs (guided by agent/IDENTITY.md, agent/SOUL.md, agent/USER.md)
   let newCandidates = [];
   if (freshResults.length > 0) {
     const triageInput = freshResults
@@ -548,13 +575,9 @@ async function processSubscription(sub) {
 
     console.log("  Asking Gemini which pages are real affiliate programmes...");
     const triage = await generateJson(
-      `You are filtering search results for an affiliate marketing digest in "${scan.industry}" (${scan.niches.join(", ")}).
-User's chosen geo locations: ${scan.geo.join(", ")}.
-For each numbered result below, decide whether it is an actual brand's online affiliate/referral programme page or network listing (such as on FlexOffers, Sovrn, Impact, ShareASale, CJ) where creators/publishers can earn commissions (is_programme: true).
-Set is_programme: false for:
-- Blog listicles like "15 best affiliate programs", forums, news articles, or general product pages with no affiliate info
-- Programmes that explicitly exclude all of the user's chosen geo locations (${scan.geo.join(", ")})
-If it is a real affiliate programme, set brand_name to the brand's name; otherwise set brand_name to "".
+      `Task: Triage search results for "${scan.industry}" (${scan.niches.join(", ")}), target geo: ${scan.geo.join(", ")}.
+Follow all rules in IDENTITY.md, SOUL.md, and USER.md.
+For each numbered result, set is_programme: true only if it is a legitimate brand affiliate/referral programme page or network listing eligible for the target geo, and set brand_name accordingly (otherwise is_programme: false, brand_name: "").
 
 ${triageInput}`,
       triageSchema
@@ -565,17 +588,16 @@ ${triageInput}`,
       .map((t) => ({ ...freshResults[t.index], brand_guess: t.brand_name }));
   }
 
-  // Combine previously Skipped leads (to re-check) + newly discovered candidates
   const allCandidates = [...skippedToRecheck, ...newCandidates];
   console.log(
     `  Processing ${allCandidates.length} candidates (${skippedToRecheck.length} re-checks + ${newCandidates.length} new)...`
   );
 
-  const reportCandidates = []; // Holds New + Returned programmes eligible for the report
+  const reportCandidates = [];
   let skippedSavedCount = 0;
   let unchangedCount = 0;
 
-  // 4. Extract & evaluate each candidate
+  // 4. Extract & evaluate each candidate (guided by agent/IDENTITY.md, agent/SOUL.md, agent/USER.md)
   for (const c of allCandidates) {
     process.stdout.write(`  Fetching ${c.url} ... `);
     const page = await fetchPageText(c.url);
@@ -586,17 +608,11 @@ ${triageInput}`,
     console.log(page.ok ? `${page.text.length} chars` : `fallback (${page.reason})`);
 
     const raw = await generateJson(
-      `Extract structured affiliate programme facts from the page below.
-Strict SOUL.md Rules:
-- Never invent information. If a text detail is not stated, return "Not found".
-- If a number field (commission_percent, commission_fixed_usd, cookie_days) is not stated, return null.
-- contact_status MUST be one of: "Apply online", "Private contact required", or "Not found".
-- If direct contact is required, explain what to ask for in application_process.
-- For signup_link, use the direct application URL if shown, otherwise "${c.url}" if an online signup exists, or "Not found" if none.
-- For website, use the brand's main homepage URL (e.g. "https://example.com"). If it is a network listing and homepage isn't shown, use "${c.url}".
-- Keep description to 1 short factual sentence with zero hype.
+      `Task: Extract structured affiliate programme facts from the page below, strictly following all rules in IDENTITY.md, SOUL.md, and USER.md.
+Use "Not found" for missing text fields and null for missing numeric fields.
+Fallback URL if direct signup/website URL is not separately listed: ${c.url}
 
-User's target geo locations: ${scan.geo.join(", ")}
+Target geo locations: ${scan.geo.join(", ")}
 Search title: ${c.title}
 Search URL: ${c.url}
 Search snippet: ${c.snippet}
@@ -641,7 +657,6 @@ ${body}`,
     const brandKey = brandName.toLowerCase();
     const existingRow = c.existingRow || seenByBrand.get(brandKey);
 
-    // Case A: Fails Rule 4 -> Save/Update as "Skipped" so we re-check next week
     if (!qualifies) {
       if (existingRow) {
         await supabase
@@ -674,7 +689,6 @@ ${body}`,
       continue;
     }
 
-    // Case B: Passes Rule 4 and already existed in memory
     if (existingRow) {
       const changes = detectChanges(existingRow, normalized);
       if (changes.length > 0) {
@@ -694,7 +708,6 @@ ${body}`,
         console.log(`    RETURNED: ${brandName} (${changeNote})`);
         if (updatedRow) reportCandidates.push(updatedRow);
       } else {
-        // Rule 6: Quietly update description/requirements, keep status Unchanged
         await supabase
           .from("programmes_seen")
           .update({
@@ -709,7 +722,6 @@ ${body}`,
         unchangedCount++;
       }
     } else {
-      // Case C: Passes Rule 4 and is brand new!
       const { data: insertedRow, error: insErr } = await supabase
         .from("programmes_seen")
         .insert({
@@ -736,10 +748,9 @@ ${body}`,
     await sleep(4500);
   }
 
-  // 5. Rank candidates (Rule 5) and cap at 15 opportunities (Rule 7)
+  // 5. Rank candidates and cap at 15 opportunities
   const rankedReportItems = rankProgrammes(reportCandidates).slice(0, MAX_REPORT_ITEMS);
 
-  // Mark last_sent = today for the items included in this report
   if (rankedReportItems.length > 0) {
     const sentIds = rankedReportItems.map((r) => r.id);
     await supabase
@@ -747,7 +758,8 @@ ${body}`,
       .update({ last_sent: today })
       .in("id", sentIds);
   }
-// 6. Save (or update) report in `reports` table BEFORE emailing (Definition of Done #9)
+
+  // 6. Save (or update) report in `reports` table BEFORE emailing
   const emailHtml = buildEmailHtml(subLabel, rankedReportItems, hadFailedSources);
   const { data: savedReport, error: repErr } = await supabase
     .from("reports")
