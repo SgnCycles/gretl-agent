@@ -2,9 +2,13 @@ name: Gretl Weekly Scan
 
 on:
   schedule:
-    # Runs every Tuesday at 07:23 UTC (08:23 CET / Stockholm time)
-    - cron: '23 7 * * 2'
-  workflow_dispatch: # Allows manual runs from the GitHub Actions tab
+    # Runs every Monday at 07:23 UTC (08:23 CET / Stockholm time)
+    - cron: '23 7 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: gretl-weekly-scan
+  cancel-in-progress: false
 
 jobs:
   run-agent:
@@ -12,10 +16,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: '22'
           cache: 'npm'
