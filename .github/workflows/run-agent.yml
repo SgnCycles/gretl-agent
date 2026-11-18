@@ -2,8 +2,9 @@ name: Gretl Weekly Scan
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
-  workflow_dispatch:
+    # Runs every Thursday at 02:23 UTC (03:23 CET / Stockholm time)
+    - cron: '23 2 * * 4'
+  workflow_dispatch: 
 
 concurrency:
   group: gretl-weekly-scan
